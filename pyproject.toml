@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "carga-operativa"
+version = "0.1.0"
+description = "Caso de demostración: carga operativa diaria por capas sobre SQLite."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "openpyxl==3.1.5",
+    "defusedxml==0.7.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.2.0",
+    "ruff==0.17.5",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+carga_operativa = [
+    "db/esquema.sql",
+    "contrato/lotes_demo.csv",
+    "demo/plantilla.html",
+    "demo/estilos.css",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "BLE"]
+
+[tool.ruff.lint.per-file-ignores]
+# Líneas de HTML dentro de plantillas: partirlas cambiaría la página generada.
+"src/carga_operativa/demo/exportar.py" = ["E501"]

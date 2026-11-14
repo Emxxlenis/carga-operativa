@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Carga operativa: caso de demostración</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="cabecera">
+  <div class="ancho">
+    <p class="sobretitulo">Datos sintéticos, generados con semilla</p>
+    <h1>Carga operativa: caso de demostración</h1>
+    <p class="aviso"><strong>Datos de demostración.</strong> No es una granja real ni datos de un empleador. Todo lo que se ve aquí lo generó el propio repositorio con la semilla 20261112, incluidos los defectos.</p>
+  </div>
+</header>
+
+<main class="ancho">
+  <section aria-labelledby="titulo-dia">
+    <h2 id="titulo-dia">Día cargado</h2>
+    <div class="dia">
+      <p class="dia-fecha">jueves 12 de noviembre de 2026 <span class="dia-iso">2026-11-12</span></p>
+      <p class="estado estado-cuadra">Conciliación: cuadra</p>
+    </div>
+    <p class="nota">Todo lo que entró está contado: aceptado o en cuarentena.</p>
+    <div class="tabla-ancha">
+    <table>
+      <caption>Los seis controles de la conciliación del día</caption>
+      <thead>
+        <tr><th scope="col">Control</th><th scope="col">Qué compara</th><th scope="col" class="num">Esperado</th><th scope="col" class="num">Obtenido</th><th scope="col">Resultado</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row" class="codigo">archivos</th><td>Archivos recibidos frente a archivos procesados por el contrato</td><td class="num">4</td><td class="num">4</td><td class="bien">Cuadra</td></tr>
+        <tr><th scope="row" class="codigo">filas</th><td>Filas leídas frente a filas aceptadas más filas en cuarentena</td><td class="num">19</td><td class="num">19</td><td class="bien">Cuadra</td></tr>
+        <tr><th scope="row" class="codigo">filas_por_archivo</th><td>Archivos que no cuadran por sí solos (se espera cero)</td><td class="num">0</td><td class="num">0</td><td class="bien">Cuadra</td></tr>
+        <tr><th scope="row" class="codigo">grano_modelo</th><td>Filas aceptadas frente a medidas cargadas en el modelo</td><td class="num">14</td><td class="num">14</td><td class="bien">Cuadra</td></tr>
+        <tr><th scope="row" class="codigo">totales_modelo</th><td>Métricas cuyo total difiere entre contrato y modelo (se espera cero)</td><td class="num">0</td><td class="num">0</td><td class="bien">Cuadra</td></tr>
+        <tr><th scope="row" class="codigo">totales_mart</th><td>Métricas cuyo total difiere entre modelo y tablero (se espera cero)</td><td class="num">0</td><td class="num">0</td><td class="bien">Cuadra</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="titulo-tablero">
+    <h2 id="titulo-tablero">Tablero del día</h2>
+    <p class="nota">Solo aparece lo que pasó el contrato. Un lote sin dato no se muestra como cero: no fue reportado o su fila quedó en cuarentena.</p>
+    <div class="paneles">
+      <article class="panel">
+        <h3>Producción</h3>
+        <p class="panel-total">4.033,5 <span class="panel-unidad">kg</span></p>
+        <p class="panel-detalle">Total del día. 4 lotes con dato.</p>
+        <p class="grafico-titulo">Total por día, últimos 14 días conciliados</p>
+        <svg class="grafico" viewBox="0 0 300 132" role="img" aria-label="Producción total por día, últimos 14 días, en kg. Máximo 6.468,4."><line class="eje" x1="4.0" y1="112.0" x2="296.0" y2="112.0"></line><text class="etiqueta" x="4.0" y="10">máx. 6.468,4 kg</text><rect class="barra" x="7.3" y="16.0" width="14.2" height="96.0"><title>2026-10-30: 6.465,6 kg</title></rect><rect class="barra" x="28.2" y="24.0" width="14.2" height="88.0"><title>2026-10-31: 5.931,2 kg</title></rect><text class="etiqueta" x="35.3" y="126.0" text-anchor="middle">31/10</text><rect class="barra" x="49.1" y="27.4" width="14.2" height="84.6"><title>2026-11-01: 5.700,2 kg</title></rect><rect class="barra" x="69.9" y="17.5" width="14.2" height="94.5"><title>2026-11-02: 6.366,0 kg</title></rect><rect class="barra" x="90.8" y="17.1" width="14.2" height="94.9"><title>2026-11-03: 6.394,2 kg</title></rect><text class="etiqueta" x="97.9" y="126.0" text-anchor="middle">03/11</text><rect class="barra" x="111.6" y="17.8" width="14.2" height="94.2"><title>2026-11-04: 6.346,7 kg</title></rect><rect class="barra" x="132.5" y="18.9" width="14.2" height="93.1"><title>2026-11-05: 6.271,0 kg</title></rect><rect class="barra" x="153.3" y="16.0" width="14.2" height="96.0"><title>2026-11-06: 6.468,4 kg</title></rect><text class="etiqueta" x="160.4" y="126.0" text-anchor="middle">06/11</text><rect class="barra" x="174.2" y="23.7" width="14.2" height="88.3"><title>2026-11-07: 5.952,1 kg</title></rect><rect class="barra" x="195.1" y="28.5" width="14.2" height="83.5"><title>2026-11-08: 5.629,0 kg</title></rect><rect class="barra" x="215.9" y="18.6" width="14.2" height="93.4"><title>2026-11-09: 6.294,1 kg</title></rect><text class="etiqueta" x="223.0" y="126.0" text-anchor="middle">09/11</text><rect class="barra" x="236.8" y="16.1" width="14.2" height="95.9"><title>2026-11-10: 6.460,7 kg</title></rect><rect class="barra" x="257.6" y="17.5" width="14.2" height="94.5"><title>2026-11-11: 6.367,4 kg</title></rect><rect class="barra barra-dia" x="278.5" y="52.1" width="14.2" height="59.9"><title>2026-11-12: 4.033,5 kg</title></rect><text class="etiqueta" x="285.6" y="126.0" text-anchor="middle">12/11</text></svg>
+        <table>
+          <caption>Detalle por lote</caption>
+          <thead><tr><th scope="col">Lote</th><th scope="col">Galpón</th><th scope="col" class="num">Producción (kg)</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">L-001</th><td>Galpón A</td><td class="num">874,3</td></tr>
+          <tr><th scope="row">L-002</th><td>Galpón A</td><td class="num">938,8</td></tr>
+          <tr><th scope="row">L-004</th><td>Galpón B</td><td class="num">1.047,8</td></tr>
+          <tr><th scope="row">L-006</th><td>Galpón C</td><td class="num">1.172,6</td></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="panel">
+        <h3>Mortalidad</h3>
+        <p class="panel-total">18 <span class="panel-unidad">aves</span></p>
+        <p class="panel-detalle">Total del día. 5 lotes con dato.</p>
+        <p class="grafico-titulo">Total por día, últimos 14 días conciliados</p>
+        <svg class="grafico" viewBox="0 0 300 132" role="img" aria-label="Mortalidad total por día, últimos 14 días, en aves. Máximo 24."><line class="eje" x1="4.0" y1="112.0" x2="296.0" y2="112.0"></line><text class="etiqueta" x="4.0" y="10">máx. 24 aves</text><rect class="barra" x="7.3" y="36.0" width="14.2" height="76.0"><title>2026-10-30: 19 aves</title></rect><rect class="barra" x="28.2" y="60.0" width="14.2" height="52.0"><title>2026-10-31: 13 aves</title></rect><text class="etiqueta" x="35.3" y="126.0" text-anchor="middle">31/10</text><rect class="barra" x="49.1" y="56.0" width="14.2" height="56.0"><title>2026-11-01: 14 aves</title></rect><rect class="barra" x="69.9" y="56.0" width="14.2" height="56.0"><title>2026-11-02: 14 aves</title></rect><rect class="barra" x="90.8" y="36.0" width="14.2" height="76.0"><title>2026-11-03: 19 aves</title></rect><text class="etiqueta" x="97.9" y="126.0" text-anchor="middle">03/11</text><rect class="barra" x="111.6" y="56.0" width="14.2" height="56.0"><title>2026-11-04: 14 aves</title></rect><rect class="barra" x="132.5" y="44.0" width="14.2" height="68.0"><title>2026-11-05: 17 aves</title></rect><rect class="barra" x="153.3" y="16.0" width="14.2" height="96.0"><title>2026-11-06: 24 aves</title></rect><text class="etiqueta" x="160.4" y="126.0" text-anchor="middle">06/11</text><rect class="barra" x="174.2" y="32.0" width="14.2" height="80.0"><title>2026-11-07: 20 aves</title></rect><rect class="barra" x="195.1" y="40.0" width="14.2" height="72.0"><title>2026-11-08: 18 aves</title></rect><rect class="barra" x="215.9" y="56.0" width="14.2" height="56.0"><title>2026-11-09: 14 aves</title></rect><text class="etiqueta" x="223.0" y="126.0" text-anchor="middle">09/11</text><rect class="barra" x="236.8" y="48.0" width="14.2" height="64.0"><title>2026-11-10: 16 aves</title></rect><rect class="barra" x="257.6" y="88.0" width="14.2" height="24.0"><title>2026-11-11: 6 aves</title></rect><rect class="barra barra-dia" x="278.5" y="40.0" width="14.2" height="72.0"><title>2026-11-12: 18 aves</title></rect><text class="etiqueta" x="285.6" y="126.0" text-anchor="middle">12/11</text></svg>
+        <table>
+          <caption>Detalle por lote</caption>
+          <thead><tr><th scope="col">Lote</th><th scope="col">Galpón</th><th scope="col" class="num">Mortalidad (aves)</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">L-001</th><td>Galpón A</td><td class="num">3</td></tr>
+          <tr><th scope="row">L-003</th><td>Galpón B</td><td class="num">6</td></tr>
+          <tr><th scope="row">L-004</th><td>Galpón B</td><td class="num">4</td></tr>
+          <tr><th scope="row">L-005</th><td>Galpón C</td><td class="num">1</td></tr>
+          <tr><th scope="row">L-006</th><td>Galpón C</td><td class="num">4</td></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="panel">
+        <h3>Ventas</h3>
+        <p class="panel-total">4.359,1 <span class="panel-unidad">kg</span></p>
+        <p class="panel-detalle">Total del día. 5 lotes con dato.</p>
+        <p class="grafico-titulo">Total por día, últimos 14 días conciliados</p>
+        <svg class="grafico" viewBox="0 0 300 132" role="img" aria-label="Ventas total por día, últimos 14 días, en kg. Máximo 6.039,2."><line class="eje" x1="4.0" y1="112.0" x2="296.0" y2="112.0"></line><text class="etiqueta" x="4.0" y="10">máx. 6.039,2 kg</text><rect class="barra" x="7.3" y="16.0" width="14.2" height="96.0"><title>2026-10-30: 6.039,2 kg</title></rect><rect class="barra" x="28.2" y="40.1" width="14.2" height="71.9"><title>2026-10-31: 4.524,0 kg</title></rect><text class="etiqueta" x="35.3" y="126.0" text-anchor="middle">31/10</text><rect class="barra" x="49.1" y="59.0" width="14.2" height="53.0"><title>2026-11-01: 3.331,2 kg</title></rect><rect class="barra" x="69.9" y="21.8" width="14.2" height="90.2"><title>2026-11-02: 5.674,1 kg</title></rect><rect class="barra" x="90.8" y="26.3" width="14.2" height="85.7"><title>2026-11-03: 5.393,2 kg</title></rect><text class="etiqueta" x="97.9" y="126.0" text-anchor="middle">03/11</text><rect class="barra" x="111.6" y="25.5" width="14.2" height="86.5"><title>2026-11-04: 5.444,7 kg</title></rect><rect class="barra" x="132.5" y="28.1" width="14.2" height="83.9"><title>2026-11-05: 5.279,6 kg</title></rect><rect class="barra" x="153.3" y="16.5" width="14.2" height="95.5"><title>2026-11-06: 6.004,7 kg</title></rect><text class="etiqueta" x="160.4" y="126.0" text-anchor="middle">06/11</text><rect class="barra" x="174.2" y="39.6" width="14.2" height="72.4"><title>2026-11-07: 4.556,1 kg</title></rect><rect class="barra" x="195.1" y="57.9" width="14.2" height="54.1"><title>2026-11-08: 3.404,4 kg</title></rect><rect class="barra" x="215.9" y="21.2" width="14.2" height="90.8"><title>2026-11-09: 5.714,3 kg</title></rect><text class="etiqueta" x="223.0" y="126.0" text-anchor="middle">09/11</text><rect class="barra" x="236.8" y="24.7" width="14.2" height="87.3"><title>2026-11-10: 5.492,2 kg</title></rect><rect class="barra" x="257.6" y="30.2" width="14.2" height="81.8"><title>2026-11-11: 5.148,9 kg</title></rect><rect class="barra barra-dia" x="278.5" y="42.7" width="14.2" height="69.3"><title>2026-11-12: 4.359,1 kg</title></rect><text class="etiqueta" x="285.6" y="126.0" text-anchor="middle">12/11</text></svg>
+        <table>
+          <caption>Detalle por lote</caption>
+          <thead><tr><th scope="col">Lote</th><th scope="col">Galpón</th><th scope="col" class="num">Ventas (kg)</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">L-001</th><td>Galpón A</td><td class="num">704,2</td></tr>
+          <tr><th scope="row">L-002</th><td>Galpón A</td><td class="num">806,4</td></tr>
+          <tr><th scope="row">L-003</th><td>Galpón B</td><td class="num">881,1</td></tr>
+          <tr><th scope="row">L-005</th><td>Galpón C</td><td class="num">939,1</td></tr>
+          <tr><th scope="row">L-006</th><td>Galpón C</td><td class="num">1.028,3</td></tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="titulo-linea-base">
+    <h2 id="titulo-linea-base">Línea base a 7 días</h2>
+    <p class="rotulo">Línea base (promedio o estacional simple). No es un modelo predictivo validado.</p>
+    <div class="tabla-ancha">
+    <table>
+      <caption>Total esperado por día si se repite el patrón reciente</caption>
+      <thead><tr><th scope="col">Fecha objetivo</th><th scope="col" class="num">Producción (kg)</th><th scope="col" class="num">Mortalidad (aves)</th><th scope="col" class="num">Ventas (kg)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">viernes 13 de noviembre de 2026</th><td class="num">6.468,0</td><td class="num">21,2</td><td class="num">5.960,1</td></tr>
+        <tr><th scope="row">sábado 14 de noviembre de 2026</th><td class="num">5.948,0</td><td class="num">16,0</td><td class="num">4.595,4</td></tr>
+        <tr><th scope="row">domingo 15 de noviembre de 2026</th><td class="num">5.643,9</td><td class="num">17,2</td><td class="num">3.344,0</td></tr>
+        <tr><th scope="row">lunes 16 de noviembre de 2026</th><td class="num">6.294,1</td><td class="num">14,2</td><td class="num">5.635,9</td></tr>
+        <tr><th scope="row">martes 17 de noviembre de 2026</th><td class="num">6.413,3</td><td class="num">18,2</td><td class="num">5.414,4</td></tr>
+        <tr><th scope="row">miércoles 18 de noviembre de 2026</th><td class="num">6.357,3</td><td class="num">14,2</td><td class="num">5.270,1</td></tr>
+        <tr><th scope="row">jueves 19 de noviembre de 2026</th><td class="num">5.708,3</td><td class="num">21,2</td><td class="num">5.118,9</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <ul class="lista">
+      <li>Producción: estacional semanal simple (mismo día de la semana, hasta 4 semanas), 28 días observados, error absoluto medio retrospectivo de 333,7 kg.</li>
+      <li>Mortalidad: estacional semanal simple (mismo día de la semana, hasta 4 semanas), 28 días observados, error absoluto medio retrospectivo de 4,1 aves.</li>
+      <li>Ventas: estacional semanal simple (mismo día de la semana, hasta 4 semanas), 28 días observados, error absoluto medio retrospectivo de 225,0 kg.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="titulo-no-entro">
+    <h2 id="titulo-no-entro">Lo que no entró</h2>
+    <p class="nota">En cuarentena: 1 archivo(s) completo(s) y 5 fila(s). Nada de esto llegó al tablero, y nada se corrigió ni se convirtió para que entrara.</p>
+    <div class="tabla-ancha">
+    <table>
+      <caption>Rechazos del día, agrupados por archivo y motivo</caption>
+      <thead><tr><th scope="col">Archivo</th><th scope="col">Alcance</th><th scope="col">Motivo</th><th scope="col">Detalle de ejemplo</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">produccion_anexo_2026-11-12.xlsx</th><td>Archivo completo</td><td>Excel con macros</td><td>El libro de Excel contiene macros. No se abre.</td></tr>
+        <tr><th scope="row">mortalidad_2026-11-12.xml</th><td>1 fila</td><td>Fecha imposible o con otro formato</td><td>La fecha 2026-11-31 no es una fecha de calendario con formato AAAA-MM-DD.</td></tr>
+        <tr><th scope="row">mortalidad_2026-11-12.xml</th><td>1 fila</td><td>Lote que no está en el catálogo</td><td>El lote L-999 no está en el catálogo de lotes.</td></tr>
+        <tr><th scope="row">produccion_2026-11-12.xlsx</th><td>1 fila</td><td>Fórmula de Excel sin evaluar</td><td>El campo valor trae una fórmula de Excel (=D3*1.02). No se evalúa.</td></tr>
+        <tr><th scope="row">produccion_2026-11-12.xlsx</th><td>1 fila</td><td>Unidad distinta a la del contrato</td><td>La unidad recibida es lb y el contrato espera kg para produccion. No se convierte.</td></tr>
+        <tr><th scope="row">ventas_2026-11-12.eml</th><td>1 fila</td><td>Falta una columna obligatoria</td><td>Falta o viene vacío un campo obligatorio: unidad. No se completa por suposición.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="titulo-demostracion">
+    <h2 id="titulo-demostracion">Qué es dato de demostración</h2>
+    <ul class="lista">
+      <li>Todo: lotes, galpones, valores, nombres de archivo y el correo, cuyo remitente usa un dominio de ejemplo.</li>
+      <li>Los datos los genera el propio repositorio con la semilla 20261112. No hay una granja real ni datos de un empleador.</li>
+      <li>Los defectos del día están sembrados a propósito: un libro con macros, una celda con fórmula, una fila en libras, una fecha imposible, un lote inexistente y una línea de correo sin unidad.</li>
+      <li>Esta página es estática: no tiene JavaScript ni hace pedidos a otro servidor.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="ancho">
+    <p>Extractor del correo: determinista de demostración (sin clave de API). Contrato versión 1. Semilla 20261112.</p>
+  </div>
+</footer>
+</body>
+</html>

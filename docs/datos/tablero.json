@@ -1,0 +1,560 @@
+{
+  "aviso": "Datos de demostración. No es una granja real ni datos de un empleador. Todo lo que se ve aquí lo generó el propio repositorio con la semilla 20261112, incluidos los defectos.",
+  "conciliacion": {
+    "controles": [
+      {
+        "control": "archivos",
+        "cuadra": true,
+        "descripcion": "Archivos recibidos frente a archivos procesados por el contrato",
+        "esperado": 4.0,
+        "obtenido": 4.0
+      },
+      {
+        "control": "filas",
+        "cuadra": true,
+        "descripcion": "Filas leídas frente a filas aceptadas más filas en cuarentena",
+        "esperado": 19.0,
+        "obtenido": 19.0
+      },
+      {
+        "control": "filas_por_archivo",
+        "cuadra": true,
+        "descripcion": "Archivos que no cuadran por sí solos (se espera cero)",
+        "esperado": 0.0,
+        "obtenido": 0.0
+      },
+      {
+        "control": "grano_modelo",
+        "cuadra": true,
+        "descripcion": "Filas aceptadas frente a medidas cargadas en el modelo",
+        "esperado": 14.0,
+        "obtenido": 14.0
+      },
+      {
+        "control": "totales_modelo",
+        "cuadra": true,
+        "descripcion": "Métricas cuyo total difiere entre contrato y modelo (se espera cero)",
+        "esperado": 0.0,
+        "obtenido": 0.0
+      },
+      {
+        "control": "totales_mart",
+        "cuadra": true,
+        "descripcion": "Métricas cuyo total difiere entre modelo y tablero (se espera cero)",
+        "esperado": 0.0,
+        "obtenido": 0.0
+      }
+    ],
+    "estado": "cuadra"
+  },
+  "dia": "2026-11-12",
+  "linea_base": {
+    "puntos": [
+      {
+        "fecha_objetivo": "2026-11-13",
+        "mae_retro": 4.095,
+        "metodo": "estacional_semanal",
+        "metrica": "mortalidad",
+        "n_observaciones": 28,
+        "valor": 21.25
+      },
+      {
+        "fecha_objetivo": "2026-11-13",
+        "mae_retro": 333.652,
+        "metodo": "estacional_semanal",
+        "metrica": "produccion",
+        "n_observaciones": 28,
+        "valor": 6468.0
+      },
+      {
+        "fecha_objetivo": "2026-11-13",
+        "mae_retro": 225.038,
+        "metodo": "estacional_semanal",
+        "metrica": "ventas",
+        "n_observaciones": 28,
+        "valor": 5960.15
+      },
+      {
+        "fecha_objetivo": "2026-11-14",
+        "mae_retro": 4.095,
+        "metodo": "estacional_semanal",
+        "metrica": "mortalidad",
+        "n_observaciones": 28,
+        "valor": 16.0
+      },
+      {
+        "fecha_objetivo": "2026-11-14",
+        "mae_retro": 333.652,
+        "metodo": "estacional_semanal",
+        "metrica": "produccion",
+        "n_observaciones": 28,
+        "valor": 5948.025
+      },
+      {
+        "fecha_objetivo": "2026-11-14",
+        "mae_retro": 225.038,
+        "metodo": "estacional_semanal",
+        "metrica": "ventas",
+        "n_observaciones": 28,
+        "valor": 4595.45
+      },
+      {
+        "fecha_objetivo": "2026-11-15",
+        "mae_retro": 4.095,
+        "metodo": "estacional_semanal",
+        "metrica": "mortalidad",
+        "n_observaciones": 28,
+        "valor": 17.25
+      },
+      {
+        "fecha_objetivo": "2026-11-15",
+        "mae_retro": 333.652,
+        "metodo": "estacional_semanal",
+        "metrica": "produccion",
+        "n_observaciones": 28,
+        "valor": 5643.9
+      },
+      {
+        "fecha_objetivo": "2026-11-15",
+        "mae_retro": 225.038,
+        "metodo": "estacional_semanal",
+        "metrica": "ventas",
+        "n_observaciones": 28,
+        "valor": 3344.025
+      },
+      {
+        "fecha_objetivo": "2026-11-16",
+        "mae_retro": 4.095,
+        "metodo": "estacional_semanal",
+        "metrica": "mortalidad",
+        "n_observaciones": 28,
+        "valor": 14.25
+      },
+      {
+        "fecha_objetivo": "2026-11-16",
+        "mae_retro": 333.652,
+        "metodo": "estacional_semanal",
+        "metrica": "produccion",
+        "n_observaciones": 28,
+        "valor": 6294.075
+      },
+      {
+        "fecha_objetivo": "2026-11-16",
+        "mae_retro": 225.038,
+        "metodo": "estacional_semanal",
+        "metrica": "ventas",
+        "n_observaciones": 28,
+        "valor": 5635.875
+      },
+      {
+        "fecha_objetivo": "2026-11-17",
+        "mae_retro": 4.095,
+        "metodo": "estacional_semanal",
+        "metrica": "mortalidad",
+        "n_observaciones": 28,
+        "valor": 18.25
+      },
+      {
+        "fecha_objetivo": "2026-11-17",
+        "mae_retro": 333.652,
+        "metodo": "estacional_semanal",
+        "metrica": "produccion",
+        "n_observaciones": 28,
+        "valor": 6413.275
+      },
+      {
+        "fecha_objetivo": "2026-11-17",
+        "mae_retro": 225.038,
+        "metodo": "estacional_semanal",
+        "metrica": "ventas",
+        "n_observaciones": 28,
+        "valor": 5414.375
+      },
+      {
+        "fecha_objetivo": "2026-11-18",
+        "mae_retro": 4.095,
+        "metodo": "estacional_semanal",
+        "metrica": "mortalidad",
+        "n_observaciones": 28,
+        "valor": 14.25
+      },
+      {
+        "fecha_objetivo": "2026-11-18",
+        "mae_retro": 333.652,
+        "metodo": "estacional_semanal",
+        "metrica": "produccion",
+        "n_observaciones": 28,
+        "valor": 6357.325
+      },
+      {
+        "fecha_objetivo": "2026-11-18",
+        "mae_retro": 225.038,
+        "metodo": "estacional_semanal",
+        "metrica": "ventas",
+        "n_observaciones": 28,
+        "valor": 5270.075
+      },
+      {
+        "fecha_objetivo": "2026-11-19",
+        "mae_retro": 4.095,
+        "metodo": "estacional_semanal",
+        "metrica": "mortalidad",
+        "n_observaciones": 28,
+        "valor": 21.25
+      },
+      {
+        "fecha_objetivo": "2026-11-19",
+        "mae_retro": 333.652,
+        "metodo": "estacional_semanal",
+        "metrica": "produccion",
+        "n_observaciones": 28,
+        "valor": 5708.275
+      },
+      {
+        "fecha_objetivo": "2026-11-19",
+        "mae_retro": 225.038,
+        "metodo": "estacional_semanal",
+        "metrica": "ventas",
+        "n_observaciones": 28,
+        "valor": 5118.85
+      }
+    ],
+    "rotulo": "Línea base (promedio o estacional simple). No es un modelo predictivo validado.",
+    "sin_emitir": null
+  },
+  "no_entro": [
+    {
+      "alcance": "Archivo completo",
+      "archivo": "produccion_anexo_2026-11-12.xlsx",
+      "cantidad": 1,
+      "detalle": "El libro de Excel contiene macros. No se abre.",
+      "explicacion": "Excel con macros",
+      "motivo": "excel_con_macros",
+      "nivel": "archivo"
+    },
+    {
+      "alcance": "1 fila",
+      "archivo": "mortalidad_2026-11-12.xml",
+      "cantidad": 1,
+      "detalle": "La fecha 2026-11-31 no es una fecha de calendario con formato AAAA-MM-DD.",
+      "explicacion": "Fecha imposible o con otro formato",
+      "motivo": "fecha_invalida",
+      "nivel": "fila"
+    },
+    {
+      "alcance": "1 fila",
+      "archivo": "mortalidad_2026-11-12.xml",
+      "cantidad": 1,
+      "detalle": "El lote L-999 no está en el catálogo de lotes.",
+      "explicacion": "Lote que no está en el catálogo",
+      "motivo": "lote_desconocido",
+      "nivel": "fila"
+    },
+    {
+      "alcance": "1 fila",
+      "archivo": "produccion_2026-11-12.xlsx",
+      "cantidad": 1,
+      "detalle": "El campo valor trae una fórmula de Excel (=D3*1.02). No se evalúa.",
+      "explicacion": "Fórmula de Excel sin evaluar",
+      "motivo": "formula_no_evaluada",
+      "nivel": "fila"
+    },
+    {
+      "alcance": "1 fila",
+      "archivo": "produccion_2026-11-12.xlsx",
+      "cantidad": 1,
+      "detalle": "La unidad recibida es lb y el contrato espera kg para produccion. No se convierte.",
+      "explicacion": "Unidad distinta a la del contrato",
+      "motivo": "unidad_distinta",
+      "nivel": "fila"
+    },
+    {
+      "alcance": "1 fila",
+      "archivo": "ventas_2026-11-12.eml",
+      "cantidad": 1,
+      "detalle": "Falta o viene vacío un campo obligatorio: unidad. No se completa por suposición.",
+      "explicacion": "Falta una columna obligatoria",
+      "motivo": "columna_faltante",
+      "nivel": "fila"
+    }
+  ],
+  "paneles": [
+    {
+      "lotes_con_dato": 4,
+      "metrica": "produccion",
+      "por_lote": [
+        {
+          "galpon": "Galpón A",
+          "lote": "L-001",
+          "valor": 874.3
+        },
+        {
+          "galpon": "Galpón A",
+          "lote": "L-002",
+          "valor": 938.8
+        },
+        {
+          "galpon": "Galpón B",
+          "lote": "L-004",
+          "valor": 1047.8
+        },
+        {
+          "galpon": "Galpón C",
+          "lote": "L-006",
+          "valor": 1172.6
+        }
+      ],
+      "serie": [
+        {
+          "fecha": "2026-10-30",
+          "valor": 6465.6
+        },
+        {
+          "fecha": "2026-10-31",
+          "valor": 5931.2
+        },
+        {
+          "fecha": "2026-11-01",
+          "valor": 5700.2
+        },
+        {
+          "fecha": "2026-11-02",
+          "valor": 6366.0
+        },
+        {
+          "fecha": "2026-11-03",
+          "valor": 6394.2
+        },
+        {
+          "fecha": "2026-11-04",
+          "valor": 6346.7
+        },
+        {
+          "fecha": "2026-11-05",
+          "valor": 6271.0
+        },
+        {
+          "fecha": "2026-11-06",
+          "valor": 6468.400000000001
+        },
+        {
+          "fecha": "2026-11-07",
+          "valor": 5952.1
+        },
+        {
+          "fecha": "2026-11-08",
+          "valor": 5629.0
+        },
+        {
+          "fecha": "2026-11-09",
+          "valor": 6294.1
+        },
+        {
+          "fecha": "2026-11-10",
+          "valor": 6460.7
+        },
+        {
+          "fecha": "2026-11-11",
+          "valor": 6367.4
+        },
+        {
+          "fecha": "2026-11-12",
+          "valor": 4033.5
+        }
+      ],
+      "titulo": "Producción",
+      "total": 4033.5,
+      "unidad": "kg"
+    },
+    {
+      "lotes_con_dato": 5,
+      "metrica": "mortalidad",
+      "por_lote": [
+        {
+          "galpon": "Galpón A",
+          "lote": "L-001",
+          "valor": 3
+        },
+        {
+          "galpon": "Galpón B",
+          "lote": "L-003",
+          "valor": 6
+        },
+        {
+          "galpon": "Galpón B",
+          "lote": "L-004",
+          "valor": 4
+        },
+        {
+          "galpon": "Galpón C",
+          "lote": "L-005",
+          "valor": 1
+        },
+        {
+          "galpon": "Galpón C",
+          "lote": "L-006",
+          "valor": 4
+        }
+      ],
+      "serie": [
+        {
+          "fecha": "2026-10-30",
+          "valor": 19
+        },
+        {
+          "fecha": "2026-10-31",
+          "valor": 13
+        },
+        {
+          "fecha": "2026-11-01",
+          "valor": 14
+        },
+        {
+          "fecha": "2026-11-02",
+          "valor": 14
+        },
+        {
+          "fecha": "2026-11-03",
+          "valor": 19
+        },
+        {
+          "fecha": "2026-11-04",
+          "valor": 14
+        },
+        {
+          "fecha": "2026-11-05",
+          "valor": 17
+        },
+        {
+          "fecha": "2026-11-06",
+          "valor": 24
+        },
+        {
+          "fecha": "2026-11-07",
+          "valor": 20
+        },
+        {
+          "fecha": "2026-11-08",
+          "valor": 18
+        },
+        {
+          "fecha": "2026-11-09",
+          "valor": 14
+        },
+        {
+          "fecha": "2026-11-10",
+          "valor": 16
+        },
+        {
+          "fecha": "2026-11-11",
+          "valor": 6
+        },
+        {
+          "fecha": "2026-11-12",
+          "valor": 18
+        }
+      ],
+      "titulo": "Mortalidad",
+      "total": 18,
+      "unidad": "aves"
+    },
+    {
+      "lotes_con_dato": 5,
+      "metrica": "ventas",
+      "por_lote": [
+        {
+          "galpon": "Galpón A",
+          "lote": "L-001",
+          "valor": 704.2
+        },
+        {
+          "galpon": "Galpón A",
+          "lote": "L-002",
+          "valor": 806.4
+        },
+        {
+          "galpon": "Galpón B",
+          "lote": "L-003",
+          "valor": 881.1
+        },
+        {
+          "galpon": "Galpón C",
+          "lote": "L-005",
+          "valor": 939.1
+        },
+        {
+          "galpon": "Galpón C",
+          "lote": "L-006",
+          "valor": 1028.3
+        }
+      ],
+      "serie": [
+        {
+          "fecha": "2026-10-30",
+          "valor": 6039.2
+        },
+        {
+          "fecha": "2026-10-31",
+          "valor": 4524.0
+        },
+        {
+          "fecha": "2026-11-01",
+          "valor": 3331.2
+        },
+        {
+          "fecha": "2026-11-02",
+          "valor": 5674.1
+        },
+        {
+          "fecha": "2026-11-03",
+          "valor": 5393.2
+        },
+        {
+          "fecha": "2026-11-04",
+          "valor": 5444.7
+        },
+        {
+          "fecha": "2026-11-05",
+          "valor": 5279.6
+        },
+        {
+          "fecha": "2026-11-06",
+          "valor": 6004.7
+        },
+        {
+          "fecha": "2026-11-07",
+          "valor": 4556.1
+        },
+        {
+          "fecha": "2026-11-08",
+          "valor": 3404.4
+        },
+        {
+          "fecha": "2026-11-09",
+          "valor": 5714.3
+        },
+        {
+          "fecha": "2026-11-10",
+          "valor": 5492.2
+        },
+        {
+          "fecha": "2026-11-11",
+          "valor": 5148.9
+        },
+        {
+          "fecha": "2026-11-12",
+          "valor": 4359.1
+        }
+      ],
+      "titulo": "Ventas",
+      "total": 4359.1,
+      "unidad": "kg"
+    }
+  ],
+  "pie": {
+    "extractor": "determinista",
+    "semilla": 20261112,
+    "version_contrato": "1"
+  },
+  "semilla": 20261112
+}

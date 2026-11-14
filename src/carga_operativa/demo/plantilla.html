@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Carga operativa: caso de demostración</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="cabecera">
+  <div class="ancho">
+    <p class="sobretitulo">Datos sintéticos, generados con semilla</p>
+    <h1>Carga operativa: caso de demostración</h1>
+    <p class="aviso"><strong>Datos de demostración.</strong> $aviso</p>
+  </div>
+</header>
+
+<main class="ancho">
+  <section aria-labelledby="titulo-dia">
+    <h2 id="titulo-dia">Día cargado</h2>
+    <div class="dia">
+      <p class="dia-fecha">$dia_largo <span class="dia-iso">$dia</span></p>
+      <p class="estado $estado_clase">Conciliación: $estado_texto</p>
+    </div>
+    <p class="nota">$estado_nota</p>
+    <div class="tabla-ancha">
+    <table>
+      <caption>Los seis controles de la conciliación del día</caption>
+      <thead>
+        <tr><th scope="col">Control</th><th scope="col">Qué compara</th><th scope="col" class="num">Esperado</th><th scope="col" class="num">Obtenido</th><th scope="col">Resultado</th></tr>
+      </thead>
+      <tbody>
+$controles
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="titulo-tablero">
+    <h2 id="titulo-tablero">Tablero del día</h2>
+    <p class="nota">Solo aparece lo que pasó el contrato. Un lote sin dato no se muestra como cero: no fue reportado o su fila quedó en cuarentena.</p>
+    <div class="paneles">
+$paneles
+    </div>
+  </section>
+
+  <section aria-labelledby="titulo-linea-base">
+    <h2 id="titulo-linea-base">Línea base a 7 días</h2>
+    <p class="rotulo">Línea base (promedio o estacional simple). No es un modelo predictivo validado.</p>
+$linea_base
+  </section>
+
+  <section aria-labelledby="titulo-no-entro">
+    <h2 id="titulo-no-entro">Lo que no entró</h2>
+    <p class="nota">$no_entro_nota</p>
+$no_entro
+  </section>
+
+  <section aria-labelledby="titulo-demostracion">
+    <h2 id="titulo-demostracion">Qué es dato de demostración</h2>
+    <ul class="lista">
+      <li>Todo: lotes, galpones, valores, nombres de archivo y el correo, cuyo remitente usa un dominio de ejemplo.</li>
+      <li>Los datos los genera el propio repositorio con la semilla $semilla. No hay una granja real ni datos de un empleador.</li>
+      <li>Los defectos del día están sembrados a propósito: un libro con macros, una celda con fórmula, una fila en libras, una fecha imposible, un lote inexistente y una línea de correo sin unidad.</li>
+      <li>Esta página es estática: no tiene JavaScript ni hace pedidos a otro servidor.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="ancho">
+    <p>Extractor del correo: $extractor. Contrato versión $version_contrato. Semilla $semilla.</p>
+  </div>
+</footer>
+</body>
+</html>
